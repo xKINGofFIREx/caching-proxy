@@ -1,3 +1,9 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().skip(1).collect();
+
+    match args {
+        _ => println!("Wrong arguments"),
+    }
 }
